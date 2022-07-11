@@ -1,23 +1,31 @@
+import React, {useState} from 'react'
 import logo from './logo.svg';
 import './App.css';
+import Menu from './Menu'
 
 function App() {
+//State  / variables
+
+const [x,y] = useState(z)
+
+const [name, setname] = useState('dog') 
+
+const [x, setx] = useState(5)
+
+//functions
+const changeName=()=>{
+  setname('cat')
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <p>dog</p>
+     <p>cat</p>
+     <p>{name}</p> 
+     <p>8*8</p>
+     <button onClick={changeName}>changenmame</button>
+     <Menu AppName={name} x={x} />
+     <Menu/>
     </div>
   );
 }
