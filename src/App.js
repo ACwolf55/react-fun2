@@ -1,31 +1,20 @@
-import React, {useState} from 'react'
-import logo from './logo.svg';
-import './App.css';
-import Menu from './Menu'
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import SearchBar from "./SearchBar";
+import axios from 'axios'
 
 function App() {
-//State  / variables
 
-const [x,y] = useState(z)
-
-const [name, setname] = useState('dog') 
-
-const [x, setx] = useState(5)
-
-//functions
-const changeName=()=>{
-  setname('cat')
-}
+  const [num,setNum] = useState(100)
+  const [arr, setarr] = useState([1,2,6,5,7])
 
   return (
     <div className="App">
-     <p>dog</p>
-     <p>cat</p>
-     <p>{name}</p> 
-     <p>8*8</p>
-     <button onClick={changeName}>changenmame</button>
-     <Menu AppName={name} x={x} />
-     <Menu/>
+    <p>REAct Is FUUNNNN!N!N!N@$N%#$N%#$!</p>
+
+    <p>8*8</p>
+    <p>{8*8}</p>
+   <SearchBar name={'value'} num={num}/>
     </div>
   );
 }
