@@ -1,21 +1,32 @@
 import React, { useEffect, useState } from "react";
-import "./App.css";
-import SearchBar from "./SearchBar";
-import axios from 'axios'
+import { DashBoard } from "./DashBoard";
+
+
 
 function App() {
 
-  const [num,setNum] = useState(100)
-  const [arr, setarr] = useState([1,2,6,5,7])
+ const [arr,setArr] = useState(['red','blue','yellow'])
+ const [num,setNum] = useState(5)
+ conts [loading,setLoading] = useState(true)
+ 
+
+  
+
+
+
+
+
+
 
   return (
     <div className="App">
-    <p>REAct Is FUUNNNN!N!N!N@$N%#$N%#$!</p>
+      
+    <header> HELLO </header>
 
-    <p>8*8</p>
-    <p>{8*8}</p>
-   <SearchBar name={'value'} num={num}/>
-    </div>
+    <DashBoard arr={arr} num={num} jetplane={0} lding={loading}/>
+     
+
+    </div>  
   );
 }
 
